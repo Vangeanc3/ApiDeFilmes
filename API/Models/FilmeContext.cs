@@ -10,6 +10,6 @@ namespace API.Models
 
         }
 
-        public DbSet<Filme> Filmes { get; set; } = null;
+        public DbSet<Filme>? Filmes { get; set; }
     }
 }
