@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddDbContext<FilmeContext>(opts =>
+builder.Services.AddDbContext<AppDbContext>(opts =>
 opts.UseMySql(builder.Configuration.GetConnectionString("filmeConection"), new MySqlServerVersion(new Version(8, 0))));
 
 //builder.Services.AddSwaggerGen(c =>
