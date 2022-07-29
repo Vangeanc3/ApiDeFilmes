@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\API",
-    "\\API\\Models",
-    "\\API\\Models\\Dtos"
+    "\\API\\Data",
+    "\\API\\Data\\Dtos",
+    "\\API\\Data\\Dtos\\CinemaDto",
+    "\\API\\Models"
   ],
   "SelectedNode": "\\APIS.sln",
   "PreviewInSolutionExplorer": false

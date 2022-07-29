@@ -8,6 +8,8 @@ namespace API.Models
         [Required]
         public int Id { get; set; }
         [Required(ErrorMessage = $"O campo Nome é obrigatório ")]
-        public string? Nome { get; set; } 
+        public string? Nome { get; set; }
+        public virtual Endereco? Endereco { get; set; }
+        public int EnderecoId { get; set; }
     }
 }

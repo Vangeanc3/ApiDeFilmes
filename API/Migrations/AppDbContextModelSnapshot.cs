@@ -2,7 +2,6 @@
 using API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,10 +9,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220726190852_CriandoTabela")]
-    partial class CriandoTabela
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +28,13 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("enderecoId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("enderecoId")
+                        .IsUnique();
 
                     b.ToTable("Cinemas");
                 });
@@ -79,6 +83,22 @@ namespace API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Filmes");
+                });
+
+            modelBuilder.Entity("API.Models.Cinema", b =>
+                {
+                    b.HasOne("API.Models.Endereco", "Endereco")
+                        .WithOne("Cinema")
+                        .HasForeignKey("API.Models.Cinema", "enderecoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Endereco");
+                });
+
+            modelBuilder.Entity("API.Models.Endereco", b =>
+                {
+                    b.Navigation("Cinema");
                 });
 #pragma warning restore 612, 618
         }
