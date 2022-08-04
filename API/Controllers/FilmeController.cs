@@ -13,7 +13,7 @@ namespace FilmesApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class FilmeController : ControllerBase
+    public class FilmeController : Controller
     {
         private AppDbContext _context;
         private IMapper _mapper;

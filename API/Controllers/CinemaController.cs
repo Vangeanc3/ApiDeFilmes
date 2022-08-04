@@ -8,7 +8,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CinemaController : ControllerBase
+    public class CinemaController : Controller
     {
         private AppDbContext _context;
         private IMapper _mapper;

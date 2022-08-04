@@ -5,8 +5,9 @@
     "\\API\\Data",
     "\\API\\Data\\Dtos",
     "\\API\\Data\\Dtos\\CinemaDto",
-    "\\API\\Models"
+    "\\API\\Models",
+    "\\API\\Profiles"
   ],
-  "SelectedNode": "\\APIS.sln",
+  "SelectedNode": "\\API\\Profiles\\GerenteProfile.cs",
   "PreviewInSolutionExplorer": false
 }
