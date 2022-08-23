@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using FilmesAPI.Models;
 
 namespace API.Models
 {
@@ -12,7 +13,10 @@ namespace API.Models
         public string? Nome { get; set; }
         public int EnderecoId { get; set; }
         public virtual Endereco? Endereco { get; set; }
+        [JsonIgnore]
         public virtual Gerente? Gerente { get; set; }
+        [JsonIgnore]
         public int GerenteId { get; set; }
+        public virtual List<Filme>? Filmes { get; set; }
     }
 }
