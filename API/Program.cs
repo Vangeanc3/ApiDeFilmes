@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Proxies;
 using API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,13 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddDbContext<AppDbContext>(opts =>
-opts.UseMySql(builder.Configuration.GetConnectionString("filmeConection"), new MySqlServerVersion(new Version(8, 0))));
 
-//builder.Services.AddSwaggerGen(c =>
-//{
-//    c.SwaggerDoc("v1", new() { Title = "TodoApi", Version = "v1" });
-//});
+// No Visual Studio
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("SqlVStudio") ?? throw new InvalidOperationException("Connection string 'SqlVStudio' not found.")));
+
+// No VsCode
+//builder.Services.AddDbContext<AppDbContext>(opts =>
+//opts.UseLazyLoadingProxies().UseMySql(builder.Configuration.GetConnectionString("MySqlConnection"), new MySqlServerVersion(new Version(8, 0))));
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

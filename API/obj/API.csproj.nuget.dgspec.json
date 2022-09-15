@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marci\\OneDrive\\Área de Trabalho\\ApiDeFilmes\\API\\API.csproj": {}
+    "C:\\Users\\est_imartins\\Desktop\\ApiDeFilmes\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marci\\OneDrive\\Área de Trabalho\\ApiDeFilmes\\API\\API.csproj": {
+    "C:\\Users\\est_imartins\\Desktop\\ApiDeFilmes\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marci\\OneDrive\\Área de Trabalho\\ApiDeFilmes\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\est_imartins\\Desktop\\ApiDeFilmes\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Marci\\OneDrive\\Área de Trabalho\\ApiDeFilmes\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Marci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marci\\OneDrive\\Área de Trabalho\\ApiDeFilmes\\API\\obj\\",
+        "projectPath": "C:\\Users\\est_imartins\\Desktop\\ApiDeFilmes\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\est_imartins\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\est_imartins\\Desktop\\ApiDeFilmes\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\est_imartins\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,13 +50,21 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.6, )"
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.6, )"
+              "version": "[6.0.9, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
@@ -89,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
